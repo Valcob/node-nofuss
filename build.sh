@@ -2,7 +2,8 @@
 rm -rf build
 mkdir build
 
-cp -r ./firmware ./build/
-cp -r ./data ./build/
-babel server.js -d ./build/
+cp -r ../../espurna/firmware ./build/
+#cp -r ./data ./build/
+npm run cmpl
+npm start
 
