@@ -1,0 +1,22 @@
+[
+  {
+    "origin": {
+      "mac": "*",
+      "device": "SONOFF",
+      "min": "1.1.1",
+      "max": "2.0.0"
+    },
+    "target": {
+      "version": "2.0.1",
+      "firmware": "/p1/f1.bin",
+      "spiffs": "",
+      "size": 562528
+    },
+    "core": {
+      "version": "2.0.1",
+      "firmware": "/p1/p2.bin",
+      "spiffs": "",
+      "size": 344272
+    }
+  }
+]
