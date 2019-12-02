@@ -4,7 +4,7 @@
   "description": "Update provider and telelemetry server for homeIOT devices",
   "scripts": {
     "build": "tsc",
-    "prod": "build && node ./build/server.js",
+    "prod": "npm run build && node ./build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./build/server.js"
   },

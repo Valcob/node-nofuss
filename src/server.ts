@@ -21,4 +21,4 @@ import Config from './config';
 import app from "./app/app";
 
 
-app.listen(Config.PORT + 1, () => console.log('Listening on port ' + Config.PORT + '!'));
+app.listen(Config.PORT, () => console.log('Listening on port ' + Config.PORT + '!'));

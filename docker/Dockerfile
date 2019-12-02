@@ -4,13 +4,13 @@ RUN apk add --update tzdata
 ENV TZ=Europe/Bucharest
 
 WORKDIR /usr/nofuss/app
-COPY package.json ./
-RUN npm install--global --no-progress --silent --depth 0
+COPY package.json .
+RUN npm install --global --no-progress --silent --depth 0
 
 # Copy application files
-COPY . /usr/nofuss/app
-RUN npm build
+COPY . .
+RUN  chmod +x ./dbuild.sh  && ./dbuild.sh
 
-EXPOSE 3000
+EXPOSE 8267
 
 CMD [ "node", "./build/server.js" ]

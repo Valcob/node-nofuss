@@ -9,7 +9,14 @@
         "target": {
             "version": "1.5.6",
             "firmware": "/firmware/fw-1.5.6.bin",
-            "spiffs": ""
+            "spiffs": "",
+            "size": "2"
+        },
+        "core": {
+            "version": "1.5.6",
+            "firmware": "/firmware/fw-core-1.5.6.bin",
+            "spiffs": "",
+            "size": "2"            
         }
     }
 ]

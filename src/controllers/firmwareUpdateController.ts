@@ -62,8 +62,9 @@ export class FirmwareUpdateController {
             });
             console.log('[req] filtered content: ', resp);
             if (resp.length > 0) {
-                const target: BuildMetaInterface = resp[0].target;
-                const core: BuildMetaInterface = resp[0].core;
+                const target: BuildMetaInterface = resp[0].target || { size: 10000000000, version: '-1', firmware: 'missing', spiffs: '' };
+                const core: BuildMetaInterface = resp[0].core || { size: 10000000000, version: '-1', firmware: 'missing', spiffs: '' };
+
                 // if OTAsize + romSize < CHIPsize then we can proceed
                 console.log('[req] checking the core + rom < chipsize', Number(core.size) + Number(target.size), Number(chipSize));
                 if (Number(core.size) + Number(target.size) < Number(chipSize)) {

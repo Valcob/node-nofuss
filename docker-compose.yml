@@ -1,11 +1,12 @@
 version: '2'
 services:
-  web:
+  nofuss:
     build:
-      context: ./docker
+      dockerfile: ./docker/Dockerfile
+      context: ./
     ports:
-      - "3000"
+      - "8267:8267"
     restart: always
     environment:
       NODE_ENV: production
-      PORT: 3000
+      PORT: 8267
