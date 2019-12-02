@@ -1,16 +1,16 @@
 FROM node:7.2.1-alpine
 
 RUN apk add --update tzdata
-ENV TZ=Europe/Moscow
-RUN npm install yarn source-map-support express node-version-compare\
-  --global --no-progress --silent --depth 0
+ENV TZ=Europe/Bucharest
+
+WORKDIR /usr/nofuss/app
+COPY package.json ./
+RUN npm install--global --no-progress --silent --depth 0
 
 # Copy application files
-COPY ../build /usr/src/app
-WORKDIR /usr/src/app
-
-RUN yarn install --production --no-progress
+COPY . /usr/nofuss/app
+RUN npm build
 
 EXPOSE 3000
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "./build/server.js" ]
