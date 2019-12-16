@@ -1,3 +1,5 @@
+Simple OTA updates delivery server for Espurna that can do a two staged OTA update if the firmware exceeds the reserved space.
+
 ## Use
 ```
 npm install
